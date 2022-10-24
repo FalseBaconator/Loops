@@ -13,16 +13,37 @@ namespace Loops
 
         static bool gameOver = false;
 
-        static string Input;
+        static ConsoleKeyInfo Input;
 
         static void Main(string[] args)
         {
             Console.CursorVisible = false;
-            DrawBorder();
             while(gameOver == false)
             {
+                Console.Clear();
+                DrawBorder();
                 PlayerDraw(storeX, storeY);
                 Input = Console.ReadKey(true);
+                if (Input.Key == ConsoleKey.Escape)
+                {
+                    gameOver = true;
+                }
+                else if (Input.Key == ConsoleKey.UpArrow && storeY > 1)
+                {
+                    storeY--;
+                }
+                else if (Input.Key == ConsoleKey.DownArrow && storeY < 9)
+                {
+                    storeY++;
+                }
+                else if (Input.Key == ConsoleKey.RightArrow && storeX < 9)
+                {
+                    storeX++;
+                }
+                else if (Input.Key == ConsoleKey.LeftArrow && storeX > 1)
+                {
+                    storeX--;
+                }
             }
         }
 
