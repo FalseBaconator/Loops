@@ -8,8 +8,8 @@ namespace Loops
 {
     internal class Program
     {
-        static int storeX = 5;
-        static int storeY = 5;
+        static int storeX = 10;
+        static int storeY = 10;
 
         static bool gameOver = false;
 
@@ -32,11 +32,11 @@ namespace Loops
                 {
                     storeY--;
                 }
-                else if (Input.Key == ConsoleKey.DownArrow && storeY < 9)
+                else if (Input.Key == ConsoleKey.DownArrow && storeY < 19)
                 {
                     storeY++;
                 }
-                else if (Input.Key == ConsoleKey.RightArrow && storeX < 9)
+                else if (Input.Key == ConsoleKey.RightArrow && storeX < 19)
                 {
                     storeX++;
                 }
@@ -49,17 +49,27 @@ namespace Loops
 
         static void DrawBorder()
         {
-            Console.WriteLine("+---------+");
-            Console.WriteLine("|         |");
-            Console.WriteLine("|         |");
-            Console.WriteLine("|         |");
-            Console.WriteLine("|         |");
-            Console.WriteLine("|         |");
-            Console.WriteLine("|         |");
-            Console.WriteLine("|         |");
-            Console.WriteLine("|         |");
-            Console.WriteLine("|         |");
-            Console.WriteLine("+---------+");
+            Console.WriteLine("+-------------------+");
+            Console.WriteLine("|                   |");
+            Console.WriteLine("|                   |");
+            Console.WriteLine("|                   |");
+            Console.WriteLine("|                   |");
+            Console.WriteLine("|                   |");
+            Console.WriteLine("|                   |");
+            Console.WriteLine("|                   |");
+            Console.WriteLine("|                   |");
+            Console.WriteLine("|                   |");
+            Console.WriteLine("|                   |");
+            Console.WriteLine("|                   |");
+            Console.WriteLine("|                   |");
+            Console.WriteLine("|                   |");
+            Console.WriteLine("|                   |");
+            Console.WriteLine("|                   |");
+            Console.WriteLine("|                   |");
+            Console.WriteLine("|                   |");
+            Console.WriteLine("|                   |");
+            Console.WriteLine("|                   |");
+            Console.Write("+-------------------+");
         }
 
         static void PlayerDraw(int x, int y)
